@@ -4,8 +4,10 @@ cmake_minimum_required(VERSION 3.29)
 set(CMAKE_CXX_STANDARD 20)
 set(TGUI_BACKEND SFML_GRAPHICS)
 set(TGUI_CXX_STANDARD 17)
-project(MMM)
+set(TGUI_SHARED_LIBS FALSE)
+add_compile_definitions(TGUI_STATIC)
 
+project(MMM)
 
 if(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
   find_package(Catch2 3 OPTIONAL)
