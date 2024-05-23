@@ -1,7 +1,9 @@
 #include <TGUI/Backend/SFML-Graphics.hpp>
 #include <TGUI/TGUI.hpp>
 #include <cmath>
-#define DEBUG
+#include <numbers>
+#define M_PI std::numbers::pi
+#define DEBUG;
 
 enum class UpdateType { SteadyState, Transient };
 enum class InputShape { Harmonic, Square, Triangle };
@@ -52,10 +54,10 @@ struct CircutParameters {
 };
 
 struct CircutState {
-  uint64_t ResistorVoltage{};
-  uint64_t inductorVoltage{};
-  uint64_t motorVoltage{};
-  uint64_t current{};
+  int64_t ResistorVoltage{};
+  int64_t inductorVoltage{};
+  int64_t motorVoltage{};
+  int64_t current{};
 };
 
 class CircutManager {
@@ -90,9 +92,10 @@ std::pair<CircutState, CircutParameters> getInitalState() {
           CircutParameters{.Resistance = 1, .inductance = 1, .Kt = 1, .Ke = 2}};
 }
 
+
+
+
 int main() {
-  float CurrentTime{};
-  float deltaTime = 0.01;
   CircutManager circutManager;
   auto [state, parameters] = getInitalState();
   while(1){
@@ -100,4 +103,5 @@ int main() {
   circutManager.update(InputShape::Harmonic,1,CurrentTime,deltaTime);
   }
   return 0;
+
 }
