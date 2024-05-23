@@ -4,17 +4,9 @@
 #include <iostream>
 #define pi 3.14
 
-bool DEBUG = true; // odpala funkcje do debugowania
 
-float dt = 0.001; //
-float Kt  ;
-float Ke ;
-float R ;
-float L ;
-float I ;
-float em;
-float ut;
-float phi;
+
+
 
 float harmonic(float t, float w)
 {
@@ -34,24 +26,22 @@ float square(float t, float w)
 }
 float triangle(float t, float w)
 {
-    float deg = (360*t*w); 
-    if((360*t*w)>360)
-    {
-        deg-=360;
-    }
+    int deg = (360*t*w); 
+    deg = deg%360;
 
     if(deg>0 and deg<=90)
     {
-        return 2*t*w*2 ;
+        return  static_cast<float>(deg/90) ;
     }
     if(deg>90 and deg<=270)
     {
-        return -2*t*w*2+1 ;
+        return static_cast<float>(-deg/90+2) ;
     }
     if(deg>270 and deg<=360)
     {
-        return 2*t*w*2-1 ;
-    }   
+        return static_cast<float>(deg/90-4) ;
+    }
+    else return 0;   
 }
 
 bool runExample(tgui::BackendGui& gui)
@@ -61,6 +51,21 @@ bool runExample(tgui::BackendGui& gui)
 
 int main()
 {
+
+float dt = 0.001; 
+float Kt  ;
+float Ke ;
+float R ;
+float L ;
+float I ;
+float em;
+float ut;
+float phi;
+
+std:: cout << harmonic(0.75,1) << ' ';
+std:: cout << square(0.75,1)<< ' ';
+std:: cout << triangle(0.75,1)<< ' ';
+
     
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "TGUI example");
     tgui::Gui gui(window);
