@@ -1,20 +1,20 @@
-#include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
+#include <TGUI/TGUI.hpp>
 #include <cmath>
 #include <iostream>
-#define pi 3.14
+#define M_PI 3.14159265358979323846
 
 
 
 
 
-float harmonic(float t, float w)
+float harmonic(uint64_t t, uint64_t w)
 {
-    return sinf(2*pi*t*w);
+    return sinf(2*M_PI*t*w);
 }
-float square(float t, float w)
+float square(uint64_t t, uint64_t w)
 {
-    if(sinf(2*pi*t*w) >= 0)
+    if(sinf(2*M_PI*t*w) >= 0)
     {
         return 1 ;
     }
@@ -24,7 +24,7 @@ float square(float t, float w)
     }
     
 }
-float triangle(float t, float w)
+float triangle(uint64_t t, uint64_t w)
 {
     int deg = (360*t*w); 
     deg = deg%360;
@@ -44,34 +44,67 @@ float triangle(float t, float w)
     else return 0;   
 }
 
-bool runExample(tgui::BackendGui& gui)
-{
-    return true;
+
+
+
+enum class UpdateType { SteadyState, Transient };
+
+struct CircutParameters {
+  uint64_t Resistance{};
+  int64_t
+      inputVoltage{}; // input voltage may possibly be a callback in the future
+  uint64_t inductance{};
+  uint64_t Kt{};
+  uint64_t Ke{};
+};
+
+struct CircutState {
+  int64_t ResistorVoltage{};
+  int64_t inductorVoltage{};
+  int64_t motorVoltage{};
+  int64_t current{};
+};
+
+class CircutManager {
+public:
+  UpdateType update(time_t deltaT) {
+    // TODO: implement the update function
+    return UpdateType::SteadyState;
+  }
+
+private:
+  CircutState state{};
+  CircutParameters params{};
+};
+
+std::pair<CircutState, CircutParameters> getInitalState() {
+  /* The function will probably serve as a callback for the TGUI library,
+   * meaning it will collect data entered by a user in a gui and init
+   * CircutState and CircutParameters for now it returns sample conditions for
+   * ease of development*/
+  return {
+      CircutState{0, 0, 0, 0},
+      CircutParameters{.Resistance = 1, .inputVoltage = 5, .inductance = 1, .Kt = 1, .Ke = 2 }};
 }
 
-int main()
-{
 
-float dt = 0.001; 
-float Kt  ;
-float Ke ;
-float R ;
-float L ;
-float I ;
-float em;
-float ut;
-float phi;
 
-float t = 3.25;
-float w = 1;
-std:: cout << harmonic(t,w) << ' ';
-std:: cout << square(t,w)<< ' ';
-std:: cout << triangle(t,w)<< ' ';
 
+int main() {
     
-    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "TGUI example");
-    tgui::Gui gui(window);
-    if(runExample(gui))
-        gui.mainLoop();
+
+    uint64_t t = 3.0;
+    uint64_t w = 1;
+    std:: cout << harmonic(t,w) << ' ';
+    std:: cout << square(t,w)<< ' ';
+    std:: cout << triangle(t,w)<< ' ';
+
+
+  time_t CurrentTime{};
+  time_t deltaTime{};
+  CircutManager circutManager;
+  auto [state, parameters] = getInitalState();
+  circutManager.update(deltaTime);
+  return 0;
 
 }
