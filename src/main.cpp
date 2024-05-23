@@ -62,9 +62,11 @@ float em;
 float ut;
 float phi;
 
-std:: cout << harmonic(0.75,1) << ' ';
-std:: cout << square(0.75,1)<< ' ';
-std:: cout << triangle(0.75,1)<< ' ';
+float t = 3.25;
+float w = 1;
+std:: cout << harmonic(t,w) << ' ';
+std:: cout << square(t,w)<< ' ';
+std:: cout << triangle(t,w)<< ' ';
 
     
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "TGUI example");
