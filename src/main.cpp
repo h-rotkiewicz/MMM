@@ -73,8 +73,8 @@ class CircutManager {
     input.emplace(InputShape::Triangle, triangle);
   }
 
-  UpdateType update(InputShape shape, uint64_t w, float currentTime, float deltaT) {
-    float Voltage = std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+  UpdateType update(uint64_t w) {
+    float Voltage = std::visit([&,this](auto&& func) { return func(w, currentTime); }, input.at(currentShape));
 #ifdef Debug
     std::cout << "Input Voltage: " << Voltage << std::endl;
 #endif
@@ -82,7 +82,16 @@ class CircutManager {
     return UpdateType::SteadyState;
   }
 
+  auto get_input(uint64_t w){
+    return std::visit([=,this](auto&& func) { return func(w, currentTime); }, input.at(currentShape)); 
+  }
+
+  void set_input_shape(InputShape shape) { currentShape = shape; }
+
  private:
+  InputShape	   currentShape = InputShape::Harmonic;
+  float currentTime = 1;
+  float delatTime = 0.01;;
   CircutState	   state{};
   CircutParameters params{};
   InputTable	   input{};
@@ -128,21 +137,82 @@ auto init_imgui() {
   return io;
 }
 
+void process_events(bool& done, auto const& window) {
+  SDL_Event event;
+  while (SDL_PollEvent(&event)) {
+    ImGui_ImplSDL3_ProcessEvent(&event);
+    if (event.type == SDL_EVENT_QUIT) done = true;
+    if (event.type == SDL_EVENT_KEY_DOWN && event.key.keysym.sym == SDLK_ESCAPE) done = true;
+    if (event.type == SDL_EVENT_WINDOW_CLOSE_REQUESTED && event.window.windowID == SDL_GetWindowID(window)) done = true;
+  }
+}
+
+void render_imgui_window() {
+    ImGui::SetNextWindowPos(ImVec2(0, 0));
+    ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y)); // Adjust the width (300) as needed
+
+    ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
+    ImGui::Begin("Left Side Window", nullptr, window_flags);
+
+    static int inputType = 0;
+    static float resistance = 0.0f;
+    static float inductance = 0.0f;
+    static float Kt = 0.0f;
+    static float Ke = 0.0f;
+
+    const char* inputTypeItems[] = { "Harmonic", "Square", "Triangle" };
+    ImGui::Combo("Input Type", &inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
+    ImGui::InputFloat("Resistance", &resistance);
+    ImGui::InputFloat("Inductance", &inductance);
+    ImGui::InputFloat("Kt", &Kt);
+    ImGui::InputFloat("Ke", &Ke);
+    ImGui::End();
+}
+
+void render_canvas(SDL_Renderer* renderer) {
+  // Set the destination rectangle for the canvas to occupy the right side of the screen
+  const auto window_height  = ImGui::GetIO().DisplaySize.y;
+  const auto window_width   = ImGui::GetIO().DisplaySize.x;
+  auto*	     canvas_texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, window_width - 300, window_height);
+  SDL_FRect  canvas_rect    = {300, 0, (window_width - 300), (window_height)};
+
+  SDL_SetRenderTarget(renderer, canvas_texture);
+  SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+  SDL_RenderClear(renderer);
+
+  SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+  SDL_FRect example_rect = {50, 50, 200, 150};
+
+  SDL_RenderFillRect(renderer, &example_rect); //TODO: Draw the circut here
+
+  SDL_SetRenderTarget(renderer, nullptr);
+
+  SDL_RenderTexture(renderer, canvas_texture, nullptr, &canvas_rect);
+}
+
+void preRender() {
+  ImGui_ImplSDLRenderer3_NewFrame();
+  ImGui_ImplSDL3_NewFrame();
+  ImGui::NewFrame();
+}
+
 int main(int, char**) {
+  constexpr auto background_color = ImVec4(0.55f, 0.55f, 0.60f, 1.00f);
   // Our state
   auto [window, renderer] = init_backend();
   auto io		  = init_imgui();
   ImGui_ImplSDL3_InitForSDLRenderer(window, renderer);
   ImGui_ImplSDLRenderer3_Init(renderer);
-
   bool done = false;
   while (!done) {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-      ImGui_ImplSDL3_ProcessEvent(&event);
-      if (event.type == SDL_EVENT_QUIT) done = true;
-      if (event.type == SDL_EVENT_WINDOW_CLOSE_REQUESTED && event.window.windowID == SDL_GetWindowID(window)) done = true;
-    }
-
+    preRender();
+    process_events(done, window);
+    render_imgui_window();
+    render_canvas(renderer);
+    ImGui::Render();
+    SDL_SetRenderDrawColor(renderer, (Uint8)(background_color.x * 255), (Uint8)(background_color.y * 255), (Uint8)(background_color.z * 255), (Uint8)(background_color.w * 255));
+    SDL_RenderClear(renderer);
+    ImGui_ImplSDLRenderer3_RenderDrawData(ImGui::GetDrawData(), renderer);
+    SDL_RenderPresent(renderer);
   }
 }
