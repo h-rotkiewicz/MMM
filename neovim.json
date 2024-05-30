@@ -1,1 +1,0 @@
-{"cargo":{"dap_name":"lldb"},"cmake":{"args":{"configure":["-D","CMAKE_EXPORT_COMPILE_COMMANDS=1"]},"dap_name":"gdb","target":"MMM","build_type":"Debug","build_dir":"{cwd}\/build\/{os}-{build_type}","cmd":"cmake"}}
