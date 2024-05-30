@@ -1,11 +1,18 @@
-#include <TGUI/Backend/SFML-Graphics.hpp>
-#include <TGUI/TGUI.hpp>
 #include <cmath>
+#include <cstdint>
+#include <iostream>
 #include <numbers>
-#define M_PI std::numbers::pi
-#define DEBUG;
+#include <ostream>
+#include <unordered_map>
+#include <variant>
+#define DEBUG
 
-enum class UpdateType { SteadyState, Transient };
+using std::unordered_map;
+
+enum class UpdateType {
+  SteadyState,
+  Transient
+};
 enum class InputShape { Harmonic, Square, Triangle };
 
 auto harmonic = [](time_t t, uint64_t w) -> float {
@@ -44,7 +51,7 @@ auto triangle = [](float t, uint64_t w) -> float
     else return 0;   
 };
 
-using InputTable = std::unordered_map<InputShape, std::variant< decltype(harmonic), decltype(square), decltype(triangle)>>;
+using InputTable = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle)>>;
 
 struct CircutParameters {
   uint64_t Resistance{};
@@ -98,6 +105,8 @@ std::pair<CircutState, CircutParameters> getInitalState() {
 int main() {
   CircutManager circutManager;
   auto [state, parameters] = getInitalState();
+  auto CurrentTime = 0.0;
+  auto deltaTime = 0.01;
   while(1){
   CurrentTime+=deltaTime;
   circutManager.update(InputShape::Harmonic,1,CurrentTime,deltaTime);

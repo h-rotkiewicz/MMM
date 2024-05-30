@@ -1,0 +1,740 @@
+[
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=gnu++20 -o CMakeFiles/MMM.dir/src/main.cpp.o -c /home/hubert/projects/MMM/src/main.cpp",
+  "file": "/home/hubert/projects/MMM/src/main.cpp",
+  "output": "CMakeFiles/MMM.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Clock.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Clock.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Err.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Err.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Sleep.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Sleep.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/String.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/String.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Utils.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Utils.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Utils.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Vector2.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Vector2.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Vector2.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Vector3.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Vector3.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Vector3.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/FileInputStream.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/FileInputStream.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/MemoryInputStream.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/MemoryInputStream.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/System/Unix/SleepImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/System/Unix/SleepImpl.cpp",
+  "output": "external/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Clipboard.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Clipboard.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Clipboard.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Context.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Context.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Context.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Cursor.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Cursor.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Cursor.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/GlContext.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/GlContext.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/GlContext.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/GlResource.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/GlResource.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/GlResource.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Joystick.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Joystick.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Joystick.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/JoystickManager.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/JoystickManager.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/JoystickManager.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Keyboard.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Keyboard.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Keyboard.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Mouse.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Mouse.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Mouse.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Touch.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Touch.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Touch.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Sensor.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Sensor.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Sensor.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/SensorManager.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/SensorManager.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/SensorManager.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/VideoMode.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/VideoMode.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/VideoMode.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Vulkan.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Vulkan.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Vulkan.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Window.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Window.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Window.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/WindowBase.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/WindowBase.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/WindowBase.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/WindowImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/WindowImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/WindowImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/CursorImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/CursorImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/ClipboardImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/ClipboardImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/InputImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/InputImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeyboardImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeyboardImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeySymToKeyMapping.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeySymToKeyMapping.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeySymToUnicodeMapping.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/KeySymToUnicodeMapping.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/SensorImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/SensorImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/Display.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/Display.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/Display.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/VideoModeImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/VideoModeImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/VulkanImplX11.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/VulkanImplX11.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/WindowImplX11.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/WindowImplX11.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/GlxContext.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/GlxContext.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/vulkan -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/JoystickImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Window/Unix/JoystickImpl.cpp",
+  "output": "external/SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/Ftp.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/Ftp.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/Ftp.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/Http.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/Http.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/Http.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/IpAddress.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/IpAddress.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/IpAddress.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/Packet.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/Packet.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/Packet.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/Socket.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/Socket.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/Socket.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/SocketSelector.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/SocketSelector.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/TcpListener.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/TcpListener.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/TcpListener.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/TcpSocket.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/TcpSocket.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/UdpSocket.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/UdpSocket.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Network/Unix/SocketImpl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Network/Unix/SocketImpl.cpp",
+  "output": "external/SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/BlendMode.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/BlendMode.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Font.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Font.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Font.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Glsl.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Glsl.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/GLCheck.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/GLCheck.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/GLExtensions.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/GLExtensions.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -fno-strict-aliasing -o CMakeFiles/sfml-graphics.dir/Image.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Image.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Image.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderStates.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderStates.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTexture.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTexture.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTarget.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTarget.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderWindow.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderWindow.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Shader.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Shader.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Shader.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/StencilMode.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/StencilMode.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/StencilMode.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/StencilMode.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Texture.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Texture.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Texture.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/TextureSaver.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/TextureSaver.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Transform.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Transform.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Transform.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Transformable.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Transformable.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/View.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/View.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/View.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Shape.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Shape.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Shape.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/CircleShape.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/CircleShape.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RectangleShape.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RectangleShape.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/ConvexShape.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/ConvexShape.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Sprite.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Sprite.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/Text.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Text.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/Text.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/VertexArray.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/VertexArray.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/VertexBuffer.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/VertexBuffer.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/stb_image -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp",
+  "output": "external/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/AudioResource.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/AudioResource.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/AudioResource.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioResource.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/AudioDevice.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/AudioDevice.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/Listener.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Listener.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Listener.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/Miniaudio.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Miniaudio.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Miniaudio.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Miniaudio.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/MiniaudioUtils.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/MiniaudioUtils.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/MiniaudioUtils.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/MiniaudioUtils.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/Music.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Music.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Music.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/Sound.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Sound.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/Sound.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundBuffer.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundBuffer.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundBufferRecorder.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundBufferRecorder.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/InputSoundFile.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/InputSoundFile.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/OutputSoundFile.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/OutputSoundFile.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundRecorder.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundRecorder.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundSource.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundSource.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundStream.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundStream.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileFactory.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileFactory.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderWav.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileReaderWav.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DMA_NO_DECODING -DMA_NO_ENCODING -DMA_NO_GENERATION -DMA_NO_RESOURCE_MANAGER -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/SFML/include -I/home/hubert/projects/MMM/external/SFML/src -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/miniaudio -isystem /home/hubert/projects/MMM/external/SFML/extlibs/headers/minimp3 -g -std=gnu++20 -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -c /home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterWav.cpp",
+  "file": "/home/hubert/projects/MMM/external/SFML/src/SFML/Audio/SoundFileWriterWav.cpp",
+  "output": "external/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -x c++-header -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/cmake_pch.hxx.gch -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx.gch"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-13_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-13_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-13_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-13_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_WINDOW_BACKEND_SFML_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_WINDOW_BACKEND_SFML_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_WINDOW_BACKEND_SFML_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_WINDOW_BACKEND_SFML_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-7_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-7_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-7_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-7_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-11_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-11_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-11_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-11_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-6_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-6_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-6_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-6_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-8_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-8_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-8_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-8_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-4_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-4_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-4_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-4_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-10_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-10_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-10_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-10_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-5_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-5_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-5_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-5_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-9_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-9_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-9_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-9_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-2_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-2_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-2_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-2_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-15_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-15_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-15_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-15_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-3_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-3_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-3_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-3_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-12_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-12_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-12_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-12_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-1_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-1_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-1_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-1_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_batch-14_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-14_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-14_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_batch-14_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Unity/unity_RENDERER_BACKEND_SFML_GRAPHICS_cxx.cxx.o -c /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_RENDERER_BACKEND_SFML_GRAPHICS_cxx.cxx",
+  "file": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_RENDERER_BACKEND_SFML_GRAPHICS_cxx.cxx",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Unity/unity_RENDERER_BACKEND_SFML_GRAPHICS_cxx.cxx.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Backend/Font/SFML-Graphics/BackendFontSFML.cpp.o -c /home/hubert/projects/MMM/external/TGUI/src/Backend/Font/SFML-Graphics/BackendFontSFML.cpp",
+  "file": "/home/hubert/projects/MMM/external/TGUI/src/Backend/Font/SFML-Graphics/BackendFontSFML.cpp",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Backend/Font/SFML-Graphics/BackendFontSFML.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/src",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -Winvalid-pch -include /home/hubert/projects/MMM/build/linux-debug/external/TGUI/src/CMakeFiles/tgui.dir/cmake_pch.hxx -o CMakeFiles/tgui.dir/Backend/SFML-Graphics.cpp.o -c /home/hubert/projects/MMM/external/TGUI/src/Backend/SFML-Graphics.cpp",
+  "file": "/home/hubert/projects/MMM/external/TGUI/src/Backend/SFML-Graphics.cpp",
+  "output": "external/TGUI/src/CMakeFiles/tgui.dir/Backend/SFML-Graphics.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/gui-builder",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/gui-builder/include -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -o CMakeFiles/gui-builder.dir/src/main.cpp.o -c /home/hubert/projects/MMM/external/TGUI/gui-builder/src/main.cpp",
+  "file": "/home/hubert/projects/MMM/external/TGUI/gui-builder/src/main.cpp",
+  "output": "external/TGUI/gui-builder/CMakeFiles/gui-builder.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/gui-builder",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/gui-builder/include -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -o CMakeFiles/gui-builder.dir/src/Form.cpp.o -c /home/hubert/projects/MMM/external/TGUI/gui-builder/src/Form.cpp",
+  "file": "/home/hubert/projects/MMM/external/TGUI/gui-builder/src/Form.cpp",
+  "output": "external/TGUI/gui-builder/CMakeFiles/gui-builder.dir/src/Form.cpp.o"
+},
+{
+  "directory": "/home/hubert/projects/MMM/build/linux-debug/external/TGUI/gui-builder",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DTGUI_STATIC -I/home/hubert/projects/MMM/external/TGUI/gui-builder/include -I/home/hubert/projects/MMM/external/TGUI/include -I/home/hubert/projects/MMM/external/SFML/include -g -std=c++20 -Wall -Wextra -Wshadow -Wsign-conversion -Wfloat-conversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wnull-dereference -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wsuggest-override -o CMakeFiles/gui-builder.dir/src/GuiBuilder.cpp.o -c /home/hubert/projects/MMM/external/TGUI/gui-builder/src/GuiBuilder.cpp",
+  "file": "/home/hubert/projects/MMM/external/TGUI/gui-builder/src/GuiBuilder.cpp",
+  "output": "external/TGUI/gui-builder/CMakeFiles/gui-builder.dir/src/GuiBuilder.cpp.o"
+}
+]
