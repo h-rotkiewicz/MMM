@@ -3,7 +3,8 @@
 #include <cmath>
 #include <numbers>
 #define M_PI std::numbers::pi
-#define DEBUG;
+#define DEBUG 
+
 
 enum class UpdateType { SteadyState, Transient };
 enum class InputShape { Harmonic, Square, Triangle };
@@ -47,17 +48,20 @@ auto triangle = [](float t, uint64_t w) -> float
 using InputTable = std::unordered_map<InputShape, std::variant< decltype(harmonic), decltype(square), decltype(triangle)>>;
 
 struct CircutParameters {
-  uint64_t Resistance{};
-  uint64_t inductance{};
+  uint64_t R{}; //resistance
+  uint64_t L{}; //inductance
   uint64_t Kt{};
   uint64_t Ke{};
+  uint64_t I{}; //Momentum
+  uint64_t k{}; //spring
 };
 
 struct CircutState {
-  int64_t ResistorVoltage{};
-  int64_t inductorVoltage{};
-  int64_t motorVoltage{};
-  int64_t current{};
+  float ResistorVoltage{};
+  float inductorVoltage{};
+  float motorVoltage{};
+  float current{};
+  float rot_speed{};
 };
 
 class CircutManager {
@@ -69,11 +73,25 @@ public:
   }
 
   UpdateType update(InputShape shape, uint64_t w ,float currentTime,float deltaT) {
-    float Voltage = std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+    float input_Voltage = std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+
+    float di = (input_Voltage*deltaT)/params.L-(params.R*state.current*deltaT)/params.L-(params.Ke*state.rot_speed*deltaT/params.L);
+    float dw = (params.Kt*state.current*deltaT)/params.I + (params.k*state.rot_speed*deltaT)/params.I;
+
+    state.rot_speed += dw;
+    state.current += di;
+
+    state.inductorVoltage = params.L*di/deltaT;
+    state.motorVoltage = params.Ke*dw/deltaT;
+    state.ResistorVoltage = state.current*params.R;
+
+
 #ifdef DEBUG 
-    std::cout << "Input Voltage: " << Voltage <<std::endl;
+    std::cout << "Input Voltage: " << input_Voltage <<std::endl;
+    std::cout << "Circuit Current: " << state.current <<std::endl;
+    std::cout << "Rotational Speed: " << state.rot_speed <<std::endl;
 #endif
-    // TODO: implement the update function
+   
     return UpdateType::SteadyState;
   }
 
@@ -88,8 +106,8 @@ std::pair<CircutState, CircutParameters> getInitalState() {
    * meaning it will collect data entered by a user in a gui and init
    * CircutState and CircutParameters for now it returns sample conditions for
    * ease of development*/
- return {CircutState{0, 0, 0, 0},
-          CircutParameters{.Resistance = 1, .inductance = 1, .Kt = 1, .Ke = 2}};
+ return {CircutState{.ResistorVoltage =0, .inductorVoltage = 0, .motorVoltage = 0, .current = 0, .rot_speed = 0},
+          CircutParameters{.R = 1, .L = 1, .Kt = 1, .Ke = 2, .I = 1, .k = 1}};
 }
 
 
@@ -97,11 +115,20 @@ std::pair<CircutState, CircutParameters> getInitalState() {
 
 int main() {
   CircutManager circutManager;
+  const float deltaTime = 0.001;
+  float CurrentTime = 0;
+  
   auto [state, parameters] = getInitalState();
-  while(1){
-  CurrentTime+=deltaTime;
+  for (size_t i = 0; i < 4; i++)
+  {
+  CurrentTime = CurrentTime + deltaTime ; 
+  #ifdef DEBUG 
+    std::cout << "CurrentTime: " << CurrentTime <<std::endl;
+   
+ #endif
   circutManager.update(InputShape::Harmonic,1,CurrentTime,deltaTime);
   }
+  
   return 0;
 
 }
