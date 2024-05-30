@@ -71,9 +71,15 @@ public:
     input.emplace(InputShape::Square, square);
     input.emplace(InputShape::Triangle, triangle);
   }
+  void init(CircutState state_init, CircutParameters params_init)
+  {
+    state = state_init;
+    params = params_init;
+  };
 
   UpdateType update(InputShape shape, uint64_t w ,float currentTime,float deltaT) {
-    float input_Voltage = std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+    float input_Voltage = 10;
+    //std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
 
     float di = (input_Voltage*deltaT)/params.L-(params.R*state.current*deltaT)/params.L-(params.Ke*state.rot_speed*deltaT/params.L);
     float dw = (params.Kt*state.current*deltaT)/params.I + (params.k*state.rot_speed*deltaT)/params.I;
@@ -115,11 +121,12 @@ std::pair<CircutState, CircutParameters> getInitalState() {
 
 int main() {
   CircutManager circutManager;
-  const float deltaTime = 0.001;
+  const float deltaTime = 0.01;
   float CurrentTime = 0;
   
   auto [state, parameters] = getInitalState();
-  for (size_t i = 0; i < 4; i++)
+  circutManager.init(state, parameters);
+  for (size_t i = 0; i < 500; i++)
   {
   CurrentTime = CurrentTime + deltaTime ; 
   #ifdef DEBUG 
