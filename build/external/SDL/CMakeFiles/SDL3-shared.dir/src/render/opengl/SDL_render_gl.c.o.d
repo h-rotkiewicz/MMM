@@ -1,0 +1,22 @@
+external/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengl/SDL_render_gl.c.o: \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/SDL_render_gl.c \
+ /usr/include/stdc-predef.h \
+ /home/hubert/projects/MMM/external/SDL/src/SDL_internal.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../../video/SDL_sysvideo.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_vulkan.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_error.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_video.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_begin_code.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_close_code.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_opengl.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_platform.h \
+ /home/hubert/projects/MMM/external/SDL/include/SDL3/SDL_opengl_glext.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../SDL_sysrender.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../SDL_yuv_sw_c.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/SDL_shaders_gl.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../../video/SDL_pixels_c.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../../video/SDL_blit.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../../SDL_utils_c.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/../../SDL_internal.h \
+ /home/hubert/projects/MMM/external/SDL/src/render/opengl/SDL_glfuncs.h

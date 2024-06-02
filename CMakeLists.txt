@@ -2,25 +2,19 @@
 include(ExternalProject)
 cmake_minimum_required(VERSION 3.29)
 set(CMAKE_CXX_STANDARD 20)
-set(TGUI_BACKEND SFML_GRAPHICS)
-set(TGUI_CXX_STANDARD 17)
-set(TGUI_SHARED_LIBS FALSE)
-add_compile_definitions(TGUI_STATIC)
 
 project(MMM)
 
-if(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
-  find_package(Catch2 3 OPTIONAL)
-  add_subdirectory(Tests)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/external/SDL)
+
+if(TARGET SDL2::SDL2main)
+    # It has an implicit dependency on SDL2 functions, so it MUST be added before SDL2::SDL2 (or SDL2::SDL2-static)
+    target_link_libraries(mygame PRIVATE SDL3::SDL3main)
 endif()
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/external/SFML)
-add_subdirectory(${CMAKE_SOURCE_DIR}/external/TGUI)
-
 file(GLOB SOURCES "src/*.cpp" "src/*.c")
-include_directories(${CMAKE_SOURCE_DIR}/external/TGUI/include)
-include_directories(${CMAKE_SOURCE_DIR}/external/SFML/include)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} tgui sfml-graphics sfml-window )
+target_link_libraries(${PROJECT_NAME} SDL3::SDL3)

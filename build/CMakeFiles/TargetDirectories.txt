@@ -1,0 +1,8 @@
+/home/hubert/projects/MMM/build/CMakeFiles/MMM.dir
+/home/hubert/projects/MMM/build/CMakeFiles/edit_cache.dir
+/home/hubert/projects/MMM/build/CMakeFiles/rebuild_cache.dir
+/home/hubert/projects/MMM/build/external/SDL/CMakeFiles/SDL3-shared.dir
+/home/hubert/projects/MMM/build/external/SDL/CMakeFiles/SDL3_test.dir
+/home/hubert/projects/MMM/build/external/SDL/CMakeFiles/uninstall.dir
+/home/hubert/projects/MMM/build/external/SDL/CMakeFiles/edit_cache.dir
+/home/hubert/projects/MMM/build/external/SDL/CMakeFiles/rebuild_cache.dir
