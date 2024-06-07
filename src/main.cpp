@@ -1,6 +1,5 @@
 #include <SDL3/SDL.h>
 #include <stdio.h>
-
 #include <cmath>
 #include <cstdint>
 #include <iostream>
@@ -32,6 +31,7 @@ enum class InputShape {
 
 auto harmonic = [](time_t t, uint64_t w) -> float { return sinf(2 * M_PI * t * w); };
 
+
 auto square = [](uint64_t t, uint64_t w) -> float {
   if (sinf(2 * M_PI * t * w) >= 0)
     return 1;
@@ -55,17 +55,21 @@ using InputTable =
 		  std::variant<decltype(harmonic), decltype(square), decltype(triangle)>>;
 
 struct CircutParameters {
-  uint64_t Resistance{};
-  uint64_t inductance{};
+  uint64_t R{}; //resistance
+  uint64_t L{}; //inductance
   uint64_t Kt{};
   uint64_t Ke{};
+  uint64_t I{}; //Momentum
+  uint64_t k{}; //spring
 };
 
 struct CircutState {
-  int64_t ResistorVoltage{};
-  int64_t inductorVoltage{};
-  int64_t motorVoltage{};
-  int64_t current{};
+  float ResistorVoltage{};
+  float inductorVoltage{};
+  float motorVoltage{};
+  float current{};
+  float rot_speed{};
+  float rotation{};
 };
 
 class CircutManager {
@@ -75,14 +79,35 @@ class CircutManager {
     input.emplace(InputShape::Square, square);
     input.emplace(InputShape::Triangle, triangle);
   }
+  void init(CircutState state_init, CircutParameters params_init)
+  {
+    state = state_init;
+    params = params_init;
+  };
 
-  UpdateType update(uint64_t w) {
-    float Voltage =
-	std::visit([&, this](auto&& func) { return func(w, currentTime); }, input.at(currentShape));
-#ifdef Debug
-    std::cout << "Input Voltage: " << Voltage << std::endl;
+  UpdateType update(InputShape shape, uint64_t w ,float currentTime,float deltaT) {
+    float input_Voltage = 10; // TODO: implement inputshape(currentTime)
+    //std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+
+    float di = (input_Voltage*deltaT)/params.L-(params.R*state.current*deltaT)/params.L-(params.Ke*state.rot_speed*deltaT/params.L);
+    float dw = (params.Kt*state.current*deltaT)/params.I - (params.k*state.rotation*deltaT)/params.I;
+
+    state.rot_speed += dw;
+    state.current += di;
+
+    state.rotation = state.rotation + state.rot_speed*deltaT;
+    state.inductorVoltage = params.L*di/deltaT;
+    state.motorVoltage = params.Ke*dw/deltaT;
+    state.ResistorVoltage = state.current*params.R;
+
+
+#ifdef DEBUG 
+    std::cout << "Input Voltage: " << input_Voltage <<std::endl;
+    std::cout << "Circuit Current: " << state.current <<std::endl;
+    std::cout << "Rotational Speed: " << state.rot_speed <<std::endl;
+
 #endif
-    // TODO: implement the update function
+   
     return UpdateType::SteadyState;
   }
 
@@ -108,7 +133,8 @@ std::pair<CircutState, CircutParameters> getInitalState() {
    * meaning it will collect data entered by a user in a gui and init
    * CircutState and CircutParameters for now it returns sample conditions for
    * ease of development*/
-  return {CircutState{0, 0, 0, 0},
+
+  return {CircutState{0, 0, 0, 0, 0},
 	  CircutParameters{.Resistance = 1, .inductance = 1, .Kt = 1, .Ke = 2}};
 }
 
@@ -124,4 +150,5 @@ int main(int, char**) {
     window.render_imgui_window();
     window.render();
   }
+
 }
