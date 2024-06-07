@@ -69,6 +69,7 @@ struct CircutState {
   float motorVoltage{};
   float current{};
   float rot_speed{};
+  float rotation{};
 };
 
 class CircutManager {
@@ -85,15 +86,16 @@ class CircutManager {
   };
 
   UpdateType update(InputShape shape, uint64_t w ,float currentTime,float deltaT) {
-    float input_Voltage = 10;
+    float input_Voltage = 10; // TODO: implement inputshape(currentTime)
     //std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
 
     float di = (input_Voltage*deltaT)/params.L-(params.R*state.current*deltaT)/params.L-(params.Ke*state.rot_speed*deltaT/params.L);
-    float dw = (params.Kt*state.current*deltaT)/params.I + (params.k*state.rot_speed*deltaT)/params.I;
+    float dw = (params.Kt*state.current*deltaT)/params.I - (params.k*state.rotation*deltaT)/params.I;
 
     state.rot_speed += dw;
     state.current += di;
 
+    state.rotation = state.rotation + state.rot_speed*deltaT;
     state.inductorVoltage = params.L*di/deltaT;
     state.motorVoltage = params.Ke*dw/deltaT;
     state.ResistorVoltage = state.current*params.R;
@@ -132,7 +134,7 @@ std::pair<CircutState, CircutParameters> getInitalState() {
    * CircutState and CircutParameters for now it returns sample conditions for
    * ease of development*/
 
-  return {CircutState{0, 0, 0, 0},
+  return {CircutState{0, 0, 0, 0, 0},
 	  CircutParameters{.Resistance = 1, .inductance = 1, .Kt = 1, .Ke = 2}};
 }
 
