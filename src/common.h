@@ -17,4 +17,11 @@ struct CircutState {
   float current{};
   float rot_speed{};
   float rotation{};
+  float InputVoltage{};
+};
+
+enum class InputShape {
+  Harmonic,
+  Square,
+  Triangle
 };

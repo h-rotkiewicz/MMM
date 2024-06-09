@@ -3,6 +3,8 @@
 #include <implot.h>
 
 #include <cmath>
+#include <iostream>
+#include <ostream>
 #include <stdexcept>
 
 #include "SDL3/SDL_hints.h"
@@ -52,13 +54,13 @@ Window::Window() {
   ImPlot::CreateContext();
 }
 
-void Window::newFrame(){
+void Window::newFrame() {
   ImGui_ImplSDLRenderer3_NewFrame();
   ImGui_ImplSDL3_NewFrame();
   ImGui::NewFrame();
 }
 
-void Window::render_imgui_window() {
+void Window::render_parameters_window() {
   ImGui::SetNextWindowPos(ImVec2(0, 0));
   ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));  // Adjust the width (300) as needed
 
@@ -72,37 +74,40 @@ void Window::render_imgui_window() {
   ImGui::InputFloat("Kt", &params.Kt);
   ImGui::InputFloat("Ke", &params.Ke);
   ImGui::InputFloat("time step", &time_step);
+  ImGui::InputFloat("width (w)", &width);
+  ImGui::InputFloat("amplitude", &amplitude);
   ImGui::Checkbox("Start Simulation", &start_simulation);
+  ImGui::BulletText("Press 'ESC' to exit the simulation");
+  ImGui::BulletText("Currently Saved States: %zu", states.size());
+  ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
+  if(ImGui::Button("Clear Data")){
+    states.clear();
+    timeSteps.clear();
+  }
   ImGui::End();
 }
 
 void Window::render_plot_window() {
-    // Populate test data (this should be removed in the actual implementation)
-    for (float i = 0; i < 100; ++i) {
-        states.push_back(CircutState{ 0, 0, 0, static_cast<float>(sin(0.2 * i)), 0});
-        timeSteps.push_back(static_cast<std::time_t>(i));
+  ImGui::SetNextWindowPos(ImVec2(300, 0));
+  ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y / 2));
+  ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
+  ImGui::Begin("Graph Window", nullptr, window_flags);
+
+  if (ImPlot::BeginPlot("Circuit Data")) {
+    std::vector<float> plotedData;
+    for (auto i : states) plotedData.push_back(i.InputVoltage);
+    ImPlot::SetupAxes("Time", "Value");  // Setup axis labels
+    if (!timeSteps.empty()) {
+      float maxX = timeSteps.back();                                         // Last timestamp value
+      float minX = maxX - 10.0f;                                         // View the last 10 seconds (adjustable)
+      ImPlot::SetupAxisLimits(ImAxis_X1, minX, maxX, ImGuiCond_Always);  // Auto-scroll
     }
+    ImPlot::PlotDigital("Input Voltage", timeSteps.data(), plotedData.data(), timeSteps.size());
 
-    ImGui::SetNextWindowPos(ImVec2(300, 0));
-    ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y / 2));  
-    ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
-    ImGui::Begin("Graph Window", nullptr, window_flags);
+    ImPlot::EndPlot();
+  }
 
-    if (ImPlot::BeginPlot("Circuit Data")) {
-        std::vector<float> times;
-        std::vector<float> values;
-
-        for (size_t i = 0; i < states.size(); ++i) {
-            times.push_back(static_cast<float>(timeSteps[i]));
-            values.push_back(states[i].current);  
-        }
-
-        ImPlot::PlotLine("current Value Over Time", times.data(), values.data(), static_cast<int>(times.size()));
-
-        ImPlot::EndPlot();
-    }
-
-    ImGui::End();
+  ImGui::End();
 }
 
 void Window::process_events(bool& done) {
@@ -122,3 +127,29 @@ void Window::render() {
   ImGui_ImplSDLRenderer3_RenderDrawData(ImGui::GetDrawData(), renderer);
   SDL_RenderPresent(renderer);
 }
+void Window::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
+
+void Window::add_state(CircutState state) {
+  std::cout << "Adding State" << std::endl;
+  std::cout << "Current: " << state.current << std::endl;
+  std::cout << "Input Voltage: " << state.InputVoltage << std::endl;
+
+  states.push_back(state);
+}
+
+InputShape Window::getInputShape() const {
+  if (inputType == 0)
+    return InputShape::Harmonic;
+  else if (inputType == 1)
+    return InputShape::Square;
+  else if (inputType == 2)
+    return InputShape::Triangle;
+  throw std::runtime_error("Invalid Input Shape");
+}
+
+CircutParameters Window::getParams() const { return params; }
+
+float Window::getWidth() const { return width; }
+
+bool  Window::is_simulation_started() const { return start_simulation; };
+float Window::get_amplitude() const { return amplitude; }
