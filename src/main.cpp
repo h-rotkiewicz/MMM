@@ -7,14 +7,7 @@
 #include <unordered_map>
 #include <variant>
 
-#include "imgui.h"
-#include "imgui_impl_sdl3.h"
-#include "imgui_impl_sdlrenderer3.h"
-#if defined(IMGUI_IMPL_OPENGL_ES2)
-#include <SDL3/SDL_opengles2.h>
-#else
-#include <SDL3/SDL_opengl.h>
-#endif
+#include "common.h"
 #include "gui.h"
 
 using std::unordered_map;
@@ -53,24 +46,6 @@ auto triangle = [](float t, uint64_t w) -> float {
 using InputTable =
     unordered_map<InputShape,
 		  std::variant<decltype(harmonic), decltype(square), decltype(triangle)>>;
-
-struct CircutParameters {
-  uint64_t R{}; //resistance
-  uint64_t L{}; //inductance
-  uint64_t Kt{};
-  uint64_t Ke{};
-  uint64_t I{}; //Momentum
-  uint64_t k{}; //spring
-};
-
-struct CircutState {
-  float ResistorVoltage{};
-  float inductorVoltage{};
-  float motorVoltage{};
-  float current{};
-  float rot_speed{};
-  float rotation{};
-};
 
 class CircutManager {
  public:
@@ -135,20 +110,23 @@ std::pair<CircutState, CircutParameters> getInitalState() {
    * ease of development*/
 
   return {CircutState{0, 0, 0, 0, 0},
-	  CircutParameters{.Resistance = 1, .inductance = 1, .Kt = 1, .Ke = 2}};
+	  CircutParameters{1, 1, 1, 1, 1, 1}};
 }
 
 int main(int, char**) {
-  constexpr static auto background_color = ImVec4(0.55f, 0.55f, 0.60f, 1.00f);
+  CircutManager circut;
   Window window;
+  float time_step = 0.01;
+  float current_time = 0;
   bool	 done = false;
   while (!done) {
-    ImGui_ImplSDLRenderer3_NewFrame();
-    ImGui_ImplSDL3_NewFrame();
-    ImGui::NewFrame();
+    circut.init(getInitalState().first, getInitalState().second);
+    circut.update(InputShape::Harmonic, 1, current_time, time_step);
+    window.newFrame();
     window.process_events(done);
     window.render_imgui_window();
+    window.render_plot_window();
     window.render();
+    current_time += time_step;
   }
-
 }
