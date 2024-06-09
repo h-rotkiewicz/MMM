@@ -43,7 +43,8 @@ class CircutManager {
   void init(CircutParameters params_init) { params = params_init; };
 
   void update(float amplitude, InputShape shape, uint64_t w, float currentTime, float deltaT) {
-    float input_Voltage = amplitude * std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+    // float input_Voltage = amplitude * std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+    float input_Voltage = 10;
     state.InputVoltage  = input_Voltage;
 
     float di = (input_Voltage * deltaT) / params.L - (params.R * state.current * deltaT) / params.L - (params.Ke * state.rot_speed * deltaT / params.L);

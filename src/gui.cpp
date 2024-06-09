@@ -2,7 +2,9 @@
 
 #include <implot.h>
 
+#include <algorithm>
 #include <cmath>
+#include <functional>
 #include <iostream>
 #include <ostream>
 #include <stdexcept>
@@ -73,14 +75,27 @@ void Window::render_parameters_window() {
   ImGui::InputFloat("Inductance", &params.I);
   ImGui::InputFloat("Kt", &params.Kt);
   ImGui::InputFloat("Ke", &params.Ke);
-  ImGui::InputFloat("time step", &time_step);
+  ImGui::InputFloat("time step", &time_step, 0.0, 0.0f, "%.10f");
   ImGui::InputFloat("width (w)", &width);
   ImGui::InputFloat("amplitude", &amplitude);
   ImGui::Checkbox("Start Simulation", &start_simulation);
+  ImGui::Checkbox("auto scroll", &auto_scroll);
   ImGui::BulletText("Press 'ESC' to exit the simulation");
   ImGui::BulletText("Currently Saved States: %zu", states.size());
   ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
-  if(ImGui::Button("Clear Data")){
+  ImGui::Text("Current Values: ");
+  if (states.size() > 0) {
+    ImGui::BulletText("current %f", states.back().current);
+    ImGui::BulletText("rot_speed %f", states.back().rot_speed);
+    ImGui::BulletText("rotation %f", states.back().rotation);
+    ImGui::BulletText("Input Voltage %f", states.back().InputVoltage);
+    ImGui::BulletText("Resistor Voltage %f", states.back().ResistorVoltage);
+    ImGui::BulletText("Inductor Voltage %f", states.back().inductorVoltage);
+    ImGui::BulletText("Motor Voltage %f", states.back().motorVoltage);
+    ImGui::BulletText("Time Step %f", timeSteps.back());
+  }
+
+  if (ImGui::Button("Clear Data")) {
     states.clear();
     timeSteps.clear();
   }
@@ -94,15 +109,21 @@ void Window::render_plot_window() {
   ImGui::Begin("Graph Window", nullptr, window_flags);
 
   if (ImPlot::BeginPlot("Circuit Data")) {
-    std::vector<float> plotedData;
-    for (auto i : states) plotedData.push_back(i.InputVoltage);
-    ImPlot::SetupAxes("Time", "Value");  // Setup axis labels
-    if (!timeSteps.empty()) {
-      float maxX = timeSteps.back();                                         // Last timestamp value
-      float minX = maxX - 10.0f;                                         // View the last 10 seconds (adjustable)
-      ImPlot::SetupAxisLimits(ImAxis_X1, minX, maxX, ImGuiCond_Always);  // Auto-scroll
+    if (timeSteps.size() > 0 && auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
+    auto plotLine = [&](const char* label, auto valueGetter) {
+      std::vector<float> values(states.size());
+      std::transform(states.begin(), states.end(), values.begin(), valueGetter);
+      ImPlot::PlotLine(label, timeSteps.data(), values.data(), timeSteps.size());
+    };
+    if (timeSteps.size() > 0) {
+      plotLine("ResistorVoltage", [](const CircutState& s) { return s.ResistorVoltage; });
+      plotLine("inductorVoltage", [](const CircutState& s) { return s.inductorVoltage; });
+      plotLine("motorVoltage", [](const CircutState& s) { return s.motorVoltage; });
+      plotLine("current", [](const CircutState& s) { return s.current; });
+      plotLine("rotation speed", [](const CircutState& s) { return s.rot_speed; });
+      plotLine("rotations", [](const CircutState& s) { return s.rotation; });
+      plotLine("Input voltage", [](const CircutState& s) { return s.InputVoltage; });
     }
-    ImPlot::PlotDigital("Input Voltage", timeSteps.data(), plotedData.data(), timeSteps.size());
 
     ImPlot::EndPlot();
   }
@@ -129,13 +150,7 @@ void Window::render() {
 }
 void Window::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
 
-void Window::add_state(CircutState state) {
-  std::cout << "Adding State" << std::endl;
-  std::cout << "Current: " << state.current << std::endl;
-  std::cout << "Input Voltage: " << state.InputVoltage << std::endl;
-
-  states.push_back(state);
-}
+void Window::add_state(CircutState state) { states.push_back(state); }
 
 InputShape Window::getInputShape() const {
   if (inputType == 0)

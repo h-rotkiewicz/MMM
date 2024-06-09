@@ -18,6 +18,7 @@ class Window {
   float                    time_step = 0.01f;
   CircutParameters         params;
   bool                     start_simulation = false;
+  bool                     auto_scroll      = true;
   float                    width{};
   float                    amplitude{};
   std::vector<CircutState> states;
