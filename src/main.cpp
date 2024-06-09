@@ -91,8 +91,9 @@ int main(int, char**) {
   bool          done         = false;
   while (!done) {
     circut.init(window.getParams());
-    if (window.is_simulation_started()) {
-      circut.update(window.get_amplitude(), window.getInputShape(), window.getWidth(), current_time, time_step);
+    auto options = window.getOptions();
+    if (options.start_simulation) {
+      circut.update(options.amplitude, window.getInputShape(), options.width, current_time, time_step);
       window.add_timeStep(current_time);
       window.add_state(circut.get_state());
     }

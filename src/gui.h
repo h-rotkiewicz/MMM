@@ -1,5 +1,4 @@
 #include <ctime>
-#include <stdexcept>
 #include <tuple>
 #include <vector>
 
@@ -8,24 +7,28 @@
 #include "common.h"
 #include "imgui.h"
 
+struct WindowOptions {
+  bool  start_simulation = false;
+  bool  auto_scroll      = true;
+  int   inputType        = 0;
+  float width            = 0.1;
+  float amplitude        = 1;
+  float time_step        = 0.01f;
+};
+
 class Window {
   constexpr static auto background_color = ImVec4(0.55f, 0.55f, 0.60f, 1.00f);
 
   ImGuiIO                  io;
   SDL_Window*              window;
   SDL_Renderer*            renderer;
-  int                      inputType = 0;
-  float                    time_step = 0.01f;
-  CircutParameters         params;
-  bool                     start_simulation = false;
-  bool                     auto_scroll      = true;
-  float                    width{};
-  float                    amplitude{};
   std::vector<CircutState> states;
   std::vector<float>       timeSteps;
+  WindowOptions            options;
+  CircutParameters         params;
 
-  std::tuple<SDL_Window*, SDL_Renderer*> init_backend();
   auto                                   init_imgui();
+  std::tuple<SDL_Window*, SDL_Renderer*> init_backend();
 
  public:
   Window();
@@ -39,7 +42,5 @@ class Window {
 
   InputShape       getInputShape() const;
   CircutParameters getParams() const;
-  float            getWidth() const;
-  float            get_amplitude() const;
-  bool             is_simulation_started() const;
+  WindowOptions    getOptions() const;
 };

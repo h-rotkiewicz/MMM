@@ -70,16 +70,16 @@ void Window::render_parameters_window() {
   ImGui::Begin("Left Side Window", nullptr, window_flags);
 
   const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle"};
-  ImGui::Combo("Input Type", &inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
+  ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
   ImGui::InputFloat("Resistance", &params.R);
   ImGui::InputFloat("Inductance", &params.I);
   ImGui::InputFloat("Kt", &params.Kt);
   ImGui::InputFloat("Ke", &params.Ke);
-  ImGui::InputFloat("time step", &time_step, 0.0, 0.0f, "%.10f");
-  ImGui::InputFloat("width (w)", &width);
-  ImGui::InputFloat("amplitude", &amplitude);
-  ImGui::Checkbox("Start Simulation", &start_simulation);
-  ImGui::Checkbox("auto scroll", &auto_scroll);
+  ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
+  ImGui::InputFloat("width (w)", &options.width);
+  ImGui::InputFloat("amplitude", &options.amplitude);
+  ImGui::Checkbox("Start Simulation", &options.start_simulation);
+  ImGui::Checkbox("auto scroll", &options.auto_scroll);
   ImGui::BulletText("Press 'ESC' to exit the simulation");
   ImGui::BulletText("Currently Saved States: %zu", states.size());
   ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
@@ -109,7 +109,7 @@ void Window::render_plot_window() {
   ImGui::Begin("Graph Window", nullptr, window_flags);
 
   if (ImPlot::BeginPlot("Circuit Data")) {
-    if (timeSteps.size() > 0 && auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
+    if (timeSteps.size() > 0 && options.auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
     auto plotLine = [&](const char* label, auto valueGetter) {
       std::vector<float> values(states.size());
       std::transform(states.begin(), states.end(), values.begin(), valueGetter);
@@ -124,10 +124,8 @@ void Window::render_plot_window() {
       plotLine("rotations", [](const CircutState& s) { return s.rotation; });
       plotLine("Input voltage", [](const CircutState& s) { return s.InputVoltage; });
     }
-
     ImPlot::EndPlot();
   }
-
   ImGui::End();
 }
 
@@ -148,23 +146,21 @@ void Window::render() {
   ImGui_ImplSDLRenderer3_RenderDrawData(ImGui::GetDrawData(), renderer);
   SDL_RenderPresent(renderer);
 }
-void Window::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
 
+
+//Getters and setters
+void Window::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
 void Window::add_state(CircutState state) { states.push_back(state); }
 
+CircutParameters Window::getParams() const { return params; }
+WindowOptions Window::getOptions() const { return options; }
+
 InputShape Window::getInputShape() const {
-  if (inputType == 0)
+  if (options.inputType == 0)
     return InputShape::Harmonic;
-  else if (inputType == 1)
+  else if (options.inputType == 1)
     return InputShape::Square;
-  else if (inputType == 2)
+  else if (options.inputType == 2)
     return InputShape::Triangle;
   throw std::runtime_error("Invalid Input Shape");
 }
-
-CircutParameters Window::getParams() const { return params; }
-
-float Window::getWidth() const { return width; }
-
-bool  Window::is_simulation_started() const { return start_simulation; };
-float Window::get_amplitude() const { return amplitude; }
