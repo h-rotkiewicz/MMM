@@ -16,7 +16,7 @@ struct WindowOptions {
   float time_step        = 0.01f;
 };
 
-class Window {
+class WindowManager {
   constexpr static auto background_color = ImVec4(0.55f, 0.55f, 0.60f, 1.00f);
 
   ImGuiIO                  io;
@@ -31,7 +31,7 @@ class Window {
   std::tuple<SDL_Window*, SDL_Renderer*> init_backend();
 
  public:
-  Window();
+  WindowManager();
   void render();
   void render_parameters_window();
   void render_plot_window();

@@ -14,7 +14,7 @@
 #include "imgui_impl_sdl3.h"
 #include "imgui_impl_sdlrenderer3.h"
 
-std::tuple<SDL_Window*, SDL_Renderer*> Window::init_backend() {
+std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::init_backend() {
   // Setup SDL
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMEPAD) != 0) throw std::runtime_error("SDL_Init failed");
 
@@ -34,7 +34,7 @@ std::tuple<SDL_Window*, SDL_Renderer*> Window::init_backend() {
   return {window, renderer};
 }
 
-auto Window::init_imgui() {
+auto WindowManager::init_imgui() {
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
   ImGuiIO io = ImGui::GetIO();
@@ -46,7 +46,7 @@ auto Window::init_imgui() {
   return io;
 }
 
-Window::Window() {
+WindowManager::WindowManager() {
   auto [window_, renderer_] = init_backend();
   window                    = window_;
   renderer                  = renderer_;
@@ -56,13 +56,13 @@ Window::Window() {
   ImPlot::CreateContext();
 }
 
-void Window::newFrame() {
+void WindowManager::newFrame() {
   ImGui_ImplSDLRenderer3_NewFrame();
   ImGui_ImplSDL3_NewFrame();
   ImGui::NewFrame();
 }
 
-void Window::render_parameters_window() {
+void WindowManager::render_parameters_window() {
   ImGui::SetNextWindowPos(ImVec2(0, 0));
   ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));  // Adjust the width (300) as needed
 
@@ -80,7 +80,7 @@ void Window::render_parameters_window() {
   ImGui::InputFloat("amplitude", &options.amplitude);
   ImGui::Checkbox("Start Simulation", &options.start_simulation);
   ImGui::Checkbox("auto scroll", &options.auto_scroll);
-  ImGui::BulletText("Press 'ESC' to exit the simulation");
+  ImGui::BulletText("Press 'ESC' to exit the program");
   ImGui::BulletText("Currently Saved States: %zu", states.size());
   ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
   ImGui::Text("Current Values: ");
@@ -102,7 +102,7 @@ void Window::render_parameters_window() {
   ImGui::End();
 }
 
-void Window::render_plot_window() {
+void WindowManager::render_plot_window() {
   ImGui::SetNextWindowPos(ImVec2(300, 0));
   ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y / 2));
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
@@ -129,7 +129,7 @@ void Window::render_plot_window() {
   ImGui::End();
 }
 
-void Window::process_events(bool& done) {
+void WindowManager::process_events(bool& done) {
   SDL_Event event;
   while (SDL_PollEvent(&event)) {
     ImGui_ImplSDL3_ProcessEvent(&event);
@@ -139,7 +139,7 @@ void Window::process_events(bool& done) {
   }
 }
 
-void Window::render() {
+void WindowManager::render() {
   ImGui::Render();
   SDL_SetRenderDrawColor(renderer, (Uint8)(background_color.x * 255), (Uint8)(background_color.y * 255), (Uint8)(background_color.z * 255), (Uint8)(background_color.w * 255));
   SDL_RenderClear(renderer);
@@ -149,13 +149,13 @@ void Window::render() {
 
 
 //Getters and setters
-void Window::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
-void Window::add_state(CircutState state) { states.push_back(state); }
+void WindowManager::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
+void WindowManager::add_state(CircutState state) { states.push_back(state); }
 
-CircutParameters Window::getParams() const { return params; }
-WindowOptions Window::getOptions() const { return options; }
+CircutParameters WindowManager::getParams() const { return params; }
+WindowOptions WindowManager::getOptions() const { return options; }
 
-InputShape Window::getInputShape() const {
+InputShape WindowManager::getInputShape() const {
   if (options.inputType == 0)
     return InputShape::Harmonic;
   else if (options.inputType == 1)

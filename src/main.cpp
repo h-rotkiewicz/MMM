@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <iostream>
+#include <numbers>
 #include <ostream>
 #include <unordered_map>
 #include <variant>
@@ -11,7 +12,7 @@
 
 using std::unordered_map;
 
-auto harmonic = [](time_t t, uint64_t w) -> float { return sinf(2 * M_PI * t * w); };
+auto harmonic = [](time_t t, uint64_t w) -> float { return sinf(2 * std::numbers::pi * t * w); };
 
 auto square = [](uint64_t t, uint64_t w) -> float {
   if (sinf(2 * M_PI * t * w) >= 0)
@@ -33,9 +34,9 @@ auto triangle = [](float t, uint64_t w) -> float {
 
 using InputTable = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle)>>;
 
-class CircutManager {
+class CircuitManager {
  public:
-  CircutManager() {
+  CircuitManager() {
     input.emplace(InputShape::Harmonic, harmonic);
     input.emplace(InputShape::Square, square);
     input.emplace(InputShape::Triangle, triangle);
@@ -84,14 +85,14 @@ class CircutManager {
 };
 
 int main(int, char**) {
-  CircutManager circut;
-  Window        window;
+  CircuitManager circut;
+  WindowManager window;
   float         time_step    = 0.01;
   float         current_time = 0;
   bool          done         = false;
   while (!done) {
-    circut.init(window.getParams());
     auto options = window.getOptions();
+    circut.init(window.getParams());
     if (options.start_simulation) {
       circut.update(options.amplitude, window.getInputShape(), options.width, current_time, time_step);
       window.add_timeStep(current_time);
