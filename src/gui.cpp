@@ -76,6 +76,8 @@ void WindowManager::render_parameters_window() {
   ImGui::InputFloat("Kt", &params.Kt);
   ImGui::InputFloat("Ke", &params.Ke);
   ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
+  ImGui::InputFloat("Momentum", &params.I);
+  ImGui::InputFloat("Stiffness", &params.k);
   ImGui::InputFloat("width (w)", &options.width);
   ImGui::InputFloat("amplitude", &options.amplitude);
   ImGui::Checkbox("Start Simulation", &options.start_simulation);
