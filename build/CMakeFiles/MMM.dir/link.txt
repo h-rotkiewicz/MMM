@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/MMM.dir/src/main.cpp.o -o MMM  -Wl,-rpath,/home/hubert/projects/MMM/build/external/SDL external/SDL/libSDL3.so.0.1.2
