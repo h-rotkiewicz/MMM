@@ -72,7 +72,7 @@ void WindowManager::render_parameters_window() {
   const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle"};
   ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
   ImGui::InputFloat("Resistance", &params.R);
-  ImGui::InputFloat("Inductance", &params.I);
+  ImGui::InputFloat("Inductance", &params.L);
   ImGui::InputFloat("Kt", &params.Kt);
   ImGui::InputFloat("Ke", &params.Ke);
   ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
@@ -106,11 +106,11 @@ void WindowManager::render_parameters_window() {
 
 void WindowManager::render_plot_window() {
   ImGui::SetNextWindowPos(ImVec2(300, 0));
-  ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y / 2));
+  ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y));
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
   ImGui::Begin("Graph Window", nullptr, window_flags);
 
-  if (ImPlot::BeginPlot("Circuit Data")) {
+  if (ImPlot::BeginPlot("Circuit Data", ImVec2(-1, ImGui::GetIO().DisplaySize.y-35))) { // -35 to account for the ImGui stuff
     if (timeSteps.size() > 0 && options.auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
     auto plotLine = [&](const char* label, auto valueGetter) {
       std::vector<float> values(states.size());

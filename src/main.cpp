@@ -12,15 +12,15 @@
 
 using std::unordered_map;
 
-auto harmonic = [](float t, int w) -> float { return sinf(2 * std::numbers::pi * t * w); };
+auto harmonic = [](float t, float w) -> float { return sinf(2 * std::numbers::pi * t * w); };
 
-auto square = [](float t, int w) -> float {
+auto square = [](float t, float w) -> float {
   if (sinf(2 * M_PI * t * w) >= 0)
     return 1;
   else
     return -1;
 };
-auto triangle = [](float t, int w) -> float {
+auto triangle = [](float t, float w) -> float {
   float deg = (360 * t * w);
   deg       = (int)deg % 360;
 
