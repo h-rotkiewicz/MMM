@@ -1,9 +1,7 @@
 #include <SDL3/SDL.h>
 
 #include <cmath>
-#include <iostream>
 #include <numbers>
-#include <ostream>
 #include <unordered_map>
 #include <variant>
 
@@ -32,7 +30,9 @@ auto triangle = [](float t, float w) -> float {
     return 0;
 };
 
-using InputTable = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle)>>;
+auto dc = [](float t, float w) -> float { return 1; };
+
+using InputTable = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle), decltype(dc)>>;
 
 class CircuitManager {
  public:
@@ -40,16 +40,21 @@ class CircuitManager {
     input.emplace(InputShape::Harmonic, harmonic);
     input.emplace(InputShape::Square, square);
     input.emplace(InputShape::Triangle, triangle);
+    input.emplace(InputShape::DC, dc);
   }
-  void init(CircutParameters params_init) { params = params_init; };
+  void init(CircutParameters params_init) { 
+    params = params_init; 
+  };
 
-  void update(float amplitude, InputShape shape, uint64_t w, float currentTime, float deltaT) {
-    float input_Voltage = amplitude * std::visit([=](auto&& func) { return func(w, currentTime); }, input.at(shape));
+  void update(float offset,float amplitude, InputShape shape, uint64_t w, float currentTime, float deltaT) {
+    float input_Voltage = amplitude * std::visit([&](auto&& func) { return func(w, currentTime); }, input.at(shape)) + offset;
     state.InputVoltage  = input_Voltage;
 
     float di = (input_Voltage * deltaT) / params.L - (params.R * state.current * deltaT) / params.L - (params.Ke * state.rot_speed * deltaT / params.L);
     float dw = (params.Kt * state.current * deltaT) / params.I - (params.k * state.rotation * deltaT) / params.I;
-
+    if(std::isnan(dw) || std::isnan(di)){
+      return;
+    }
     state.rot_speed += dw;
     state.current += di;
 
@@ -62,7 +67,6 @@ class CircuitManager {
     std::cout << "Input Voltage: " << input_Voltage << std::endl;
     std::cout << "Circuit Current: " << state.current << std::endl;
     std::cout << "Rotational Speed: " << state.rot_speed << std::endl;
-
 #endif
   }
 
@@ -85,15 +89,15 @@ class CircuitManager {
 
 int main(int, char**) {
   CircuitManager circut;
-  WindowManager window;
-  float         time_step    = 0.01;
-  float         current_time = 0;
-  bool          done         = false;
+  WindowManager  window;
+  float          time_step    = 0.01;
+  float          current_time = 0;
+  bool           done         = false;
   while (!done) {
     auto options = window.getOptions();
     circut.init(window.getParams());
     if (options.start_simulation) {
-      circut.update(options.amplitude, window.getInputShape(), options.width, current_time, time_step);
+      circut.update(options.offset,options.amplitude, window.getInputShape(), options.width, current_time, time_step);
       window.add_timeStep(current_time);
       window.add_state(circut.get_state());
       current_time += time_step;

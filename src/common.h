@@ -23,5 +23,6 @@ struct CircutState {
 enum class InputShape {
   Harmonic,
   Square,
-  Triangle
+  Triangle,
+  DC,
 };

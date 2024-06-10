@@ -11,9 +11,10 @@ struct WindowOptions {
   bool  start_simulation = false;
   bool  auto_scroll      = true;
   int   inputType        = 0;
-  float width            = 0.1;
+  float width            = 1;
   float amplitude        = 1;
   float time_step        = 0.01f;
+  float offset           = 0;
 };
 
 class WindowManager {

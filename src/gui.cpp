@@ -23,7 +23,7 @@ std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::init_backend() {
 
   // Create window with SDL_Renderer graphics context
   Uint32      window_flags = SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIDDEN;
-  SDL_Window* window       = SDL_CreateWindow("Dear ImGui SDL3+SDL_Renderer example", 1280, 720, window_flags);
+  SDL_Window* window       = SDL_CreateWindow("Circut simulation", 1280, 720, window_flags);
   if (window == nullptr) throw std::runtime_error("SDL_CreateWindow failed");
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderVSync(renderer, 1);
@@ -69,8 +69,10 @@ void WindowManager::render_parameters_window() {
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
   ImGui::Begin("Left Side Window", nullptr, window_flags);
 
-  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle"};
+  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle", "dc"};
   ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
+  ImGui::InputFloat("dc offset", &options.offset);
+  ImGui::InputFloat("omega", &options.width);
   ImGui::InputFloat("Resistance", &params.R);
   ImGui::InputFloat("Inductance", &params.L);
   ImGui::InputFloat("Kt", &params.Kt);
@@ -164,5 +166,7 @@ InputShape WindowManager::getInputShape() const {
     return InputShape::Square;
   else if (options.inputType == 2)
     return InputShape::Triangle;
+  else if (options.inputType == 3)
+    return InputShape::DC;
   throw std::runtime_error("Invalid Input Shape");
 }
