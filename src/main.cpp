@@ -56,7 +56,7 @@ class CircuitManager {
 
     state.rotation        = state.rotation + state.rot_speed * deltaT;
     state.inductorVoltage = params.L * di / deltaT;
-    state.motorVoltage    = params.Ke * dw / deltaT;
+    state.motorVoltage    = params.Ke * state.rot_speed;
     state.ResistorVoltage = state.current * params.R;
 
 #ifdef DEBUG
@@ -81,13 +81,13 @@ class CircuitManager {
 int main(int, char**) {
   CircuitManager circut;
   WindowManager  window;
-  float          time_step    = 0.01;
   float          current_time = 0;
   bool           done         = false;
 
   while (!done) {
     auto options = window.getOptions();
     circut.set_params(window.getParams());
+    float time_step = options.time_step;
     if (options.start_simulation) {
       circut.update(options.offset, options.amplitude, window.getInputShape(), options.width, current_time, time_step);
       window.add_timeStep(current_time);
