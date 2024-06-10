@@ -62,49 +62,6 @@ void WindowManager::newFrame() {
   ImGui::NewFrame();
 }
 
-void WindowManager::render_parameters_window() {
-  ImGui::SetNextWindowPos(ImVec2(0, 0));
-  ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));  // Adjust the width (300) as needed
-
-  ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
-  ImGui::Begin("Left Side Window", nullptr, window_flags);
-
-  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle", "dc"};
-  ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
-  ImGui::InputFloat("dc offset", &options.offset);
-  ImGui::InputFloat("omega", &options.width);
-  ImGui::InputFloat("Resistance", &params.R);
-  ImGui::InputFloat("Inductance", &params.L);
-  ImGui::InputFloat("Kt", &params.Kt);
-  ImGui::InputFloat("Ke", &params.Ke);
-  ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
-  ImGui::InputFloat("Momentum", &params.I);
-  ImGui::InputFloat("Stiffness", &params.k);
-  ImGui::InputFloat("width (w)", &options.width);
-  ImGui::InputFloat("amplitude", &options.amplitude);
-  ImGui::Checkbox("Start Simulation", &options.start_simulation);
-  ImGui::Checkbox("auto scroll", &options.auto_scroll);
-  ImGui::BulletText("Press 'ESC' to exit the program");
-  ImGui::BulletText("Currently Saved States: %zu", states.size());
-  ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
-  ImGui::Text("Current Values: ");
-  if (states.size() > 0) {
-    ImGui::BulletText("current %f", states.back().current);
-    ImGui::BulletText("rot_speed %f", states.back().rot_speed);
-    ImGui::BulletText("rotation %f", states.back().rotation);
-    ImGui::BulletText("Input Voltage %f", states.back().InputVoltage);
-    ImGui::BulletText("Resistor Voltage %f", states.back().ResistorVoltage);
-    ImGui::BulletText("Inductor Voltage %f", states.back().inductorVoltage);
-    ImGui::BulletText("Motor Voltage %f", states.back().motorVoltage);
-    ImGui::BulletText("Time Step %f", timeSteps.back());
-  }
-
-  if (ImGui::Button("Clear Data")) {
-    states.clear();
-    timeSteps.clear();
-  }
-  ImGui::End();
-}
 
 void WindowManager::render_plot_window() {
   ImGui::SetNextWindowPos(ImVec2(300, 0));
@@ -170,3 +127,53 @@ InputShape WindowManager::getInputShape() const {
     return InputShape::DC;
   throw std::runtime_error("Invalid Input Shape");
 }
+void WindowManager::render_parameters_window(std::function<void(void)> const& callback) {
+  ImGui::SetNextWindowPos(ImVec2(0, 0));
+  ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));
+
+  ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
+  ImGui::Begin("Left Side Window", nullptr, window_flags);
+
+  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle", "dc"};
+  ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
+  ImGui::InputFloat("dc offset", &options.offset);
+  ImGui::InputFloat("omega", &options.width);
+  ImGui::InputFloat("Resistance", &params.R);
+  ImGui::InputFloat("Inductance", &params.L);
+  ImGui::InputFloat("Kt", &params.Kt);
+  ImGui::InputFloat("Ke", &params.Ke);
+  ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
+  ImGui::InputFloat("Momentum", &params.I);
+  ImGui::InputFloat("Stiffness", &params.k);
+  ImGui::InputFloat("width (w)", &options.width);
+  ImGui::InputFloat("amplitude", &options.amplitude);
+  ImGui::Checkbox("Start Simulation", &options.start_simulation);
+  ImGui::Checkbox("auto scroll", &options.auto_scroll);
+  ImGui::BulletText("Press 'ESC' to exit the program");
+  ImGui::BulletText("Currently Saved States: %zu", states.size());
+  ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
+  ImGui::Text("Current Values: ");
+  if (states.size() > 0) {
+    ImGui::BulletText("current %f", states.back().current);
+    ImGui::BulletText("rot_speed %f", states.back().rot_speed);
+    ImGui::BulletText("rotation %f", states.back().rotation);
+    ImGui::BulletText("Input Voltage %f", states.back().InputVoltage);
+    ImGui::BulletText("Resistor Voltage %f", states.back().ResistorVoltage);
+    ImGui::BulletText("Inductor Voltage %f", states.back().inductorVoltage);
+    ImGui::BulletText("Motor Voltage %f", states.back().motorVoltage);
+    ImGui::BulletText("Time Step %f", timeSteps.back());
+  }
+
+  if (ImGui::Button("Clear Data")) {
+    states.clear();
+    timeSteps.clear();
+  }
+
+  if (ImGui::Button("Reset")) {
+    states.clear();
+    timeSteps.clear();
+    callback();
+  }
+  ImGui::End();
+}
+

@@ -1,4 +1,5 @@
 #include <ctime>
+#include <functional>
 #include <tuple>
 #include <vector>
 
@@ -34,8 +35,9 @@ class WindowManager {
  public:
   WindowManager();
   void render();
-  void render_parameters_window();
   void render_plot_window();
+
+  void render_parameters_window(std::function<void(void)> const& callback);
   void process_events(bool& done);
   void newFrame();
   void add_timeStep(float timeStep);

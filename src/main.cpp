@@ -42,19 +42,15 @@ class CircuitManager {
     input.emplace(InputShape::Triangle, triangle);
     input.emplace(InputShape::DC, dc);
   }
-  void init(CircutParameters params_init) { 
-    params = params_init; 
-  };
+  void set_params(CircutParameters params_init) { params = params_init; };
 
-  void update(float offset,float amplitude, InputShape shape, uint64_t w, float currentTime, float deltaT) {
+  void update(float offset, float amplitude, InputShape shape, float w, float currentTime, float deltaT) {
     float input_Voltage = amplitude * std::visit([&](auto&& func) { return func(w, currentTime); }, input.at(shape)) + offset;
     state.InputVoltage  = input_Voltage;
 
     float di = (input_Voltage * deltaT) / params.L - (params.R * state.current * deltaT) / params.L - (params.Ke * state.rot_speed * deltaT / params.L);
     float dw = (params.Kt * state.current * deltaT) / params.I - (params.k * state.rotation * deltaT) / params.I;
-    if(std::isnan(dw) || std::isnan(di)){
-      return;
-    }
+    if (std::isnan(dw) || std::isnan(di)) return;
     state.rot_speed += dw;
     state.current += di;
 
@@ -69,13 +65,8 @@ class CircuitManager {
     std::cout << "Rotational Speed: " << state.rot_speed << std::endl;
 #endif
   }
-
-  auto get_state() { return state; }
-  auto get_input(uint64_t w) {
-    return std::visit([=, this](auto&& func) { return func(w, currentTime); }, input.at(currentShape));
-  }
-
-  void set_input_shape(InputShape shape) { currentShape = shape; }
+  auto get_state() const { return state; }
+  auto reset() { state = CircutState{}; }
 
  private:
   InputShape currentShape = InputShape::Harmonic;
@@ -93,18 +84,22 @@ int main(int, char**) {
   float          time_step    = 0.01;
   float          current_time = 0;
   bool           done         = false;
+
   while (!done) {
     auto options = window.getOptions();
-    circut.init(window.getParams());
+    circut.set_params(window.getParams());
     if (options.start_simulation) {
-      circut.update(options.offset,options.amplitude, window.getInputShape(), options.width, current_time, time_step);
+      circut.update(options.offset, options.amplitude, window.getInputShape(), options.width, current_time, time_step);
       window.add_timeStep(current_time);
       window.add_state(circut.get_state());
       current_time += time_step;
     }
     window.newFrame();
     window.process_events(done);
-    window.render_parameters_window();
+    window.render_parameters_window([&circut, &current_time]() {
+      circut.reset();
+      current_time = 0;
+    });
     window.render_plot_window();
     window.render();
   }
