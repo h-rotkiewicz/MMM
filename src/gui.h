@@ -29,19 +29,19 @@ class WindowManager {
   WindowOptions            options;
   CircutParameters         params;
 
-  auto                                   init_imgui();
-  std::tuple<SDL_Window*, SDL_Renderer*> init_backend();
+  auto                                   initImgui();
+  std::tuple<SDL_Window*, SDL_Renderer*> initBackend();
 
  public:
   WindowManager();
   void render();
-  void render_plot_window();
+  void renderPlotWindow();
 
-  void render_parameters_window(std::function<void(void)> const& callback);
-  void process_events(bool& done);
+  void renderParametersWindow(std::function<void(void)> const& callback);
+  void processEvents(bool& done);
   void newFrame();
-  void add_timeStep(float timeStep);
-  void add_state(CircutState state);
+  void addTimeStep(float timeStep);
+  void addState(CircutState state);
 
   InputShape       getInputShape() const;
   CircutParameters getParams() const;

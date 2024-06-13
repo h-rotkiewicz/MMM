@@ -14,7 +14,7 @@
 #include "imgui_impl_sdl3.h"
 #include "imgui_impl_sdlrenderer3.h"
 
-std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::init_backend() {
+std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::initBackend() {
   // Setup SDL
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMEPAD) != 0) throw std::runtime_error("SDL_Init failed");
 
@@ -34,7 +34,7 @@ std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::init_backend() {
   return {window, renderer};
 }
 
-auto WindowManager::init_imgui() {
+auto WindowManager::initImgui() {
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
   ImGuiIO io = ImGui::GetIO();
@@ -47,10 +47,10 @@ auto WindowManager::init_imgui() {
 }
 
 WindowManager::WindowManager() {
-  auto [window_, renderer_] = init_backend();
+  auto [window_, renderer_] = initBackend();
   window                    = window_;
   renderer                  = renderer_;
-  ImGuiIO io                = init_imgui();
+  ImGuiIO io                = initImgui();
   ImGui_ImplSDL3_InitForSDLRenderer(window, renderer);
   ImGui_ImplSDLRenderer3_Init(renderer);
   ImPlot::CreateContext();
@@ -62,7 +62,7 @@ void WindowManager::newFrame() {
   ImGui::NewFrame();
 }
 
-void WindowManager::render_plot_window() {
+void WindowManager::renderPlotWindow() {
   ImGui::SetNextWindowPos(ImVec2(300, 0));
   ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y));
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
@@ -91,7 +91,7 @@ void WindowManager::render_plot_window() {
   ImGui::End();
 }
 
-void WindowManager::process_events(bool& done) {
+void WindowManager::processEvents(bool& done) {
   SDL_Event event;
   while (SDL_PollEvent(&event)) {
     ImGui_ImplSDL3_ProcessEvent(&event);
@@ -110,8 +110,8 @@ void WindowManager::render() {
 }
 
 // Getters and setters
-void WindowManager::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
-void WindowManager::add_state(CircutState state) { states.push_back(state); }
+void WindowManager::addTimeStep(float timeStep) { timeSteps.push_back(timeStep); }
+void WindowManager::addState(CircutState state) { states.push_back(state); }
 
 CircutParameters WindowManager::getParams() const { return params; }
 WindowOptions    WindowManager::getOptions() const { return options; }
@@ -127,7 +127,7 @@ InputShape WindowManager::getInputShape() const {
     return InputShape::DC;
   throw std::runtime_error("Invalid Input Shape");
 }
-void WindowManager::render_parameters_window(std::function<void(void)> const& resetCallback) {
+void WindowManager::renderParametersWindow(std::function<void(void)> const& resetCallback) {
   ImGui::SetNextWindowPos(ImVec2(0, 0));
   ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));
 

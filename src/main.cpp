@@ -42,7 +42,7 @@ class CircuitManager {
     input.emplace(InputShape::Triangle, triangle);
     input.emplace(InputShape::DC, dc);
   }
-  void set_params(CircutParameters params_init) { params = params_init; };
+  void setParams(CircutParameters params_init) { params = params_init; };
 
   void update(float offset, float amplitude, InputShape shape, float w, float currentTime, float deltaT) {
     float input_Voltage = amplitude * std::visit([&](auto&& func) { return func(w, currentTime); }, input.at(shape)) + offset;
@@ -65,7 +65,7 @@ class CircuitManager {
     std::cout << "Rotational Speed: " << state.rot_speed << std::endl;
 #endif
   }
-  auto get_state() const { return state; }
+  auto getState() const { return state; }
   auto reset() { state = CircutState{}; }
 
  private:
@@ -79,28 +79,28 @@ class CircuitManager {
 };
 
 int main(int, char**) {
-  CircuitManager circut;
+  CircuitManager circuit;
   WindowManager  window;
   float          current_time = 0;
   bool           done         = false;
 
   while (!done) {
     auto options = window.getOptions();
-    circut.set_params(window.getParams());
+    circuit.setParams(window.getParams());
     float time_step = options.time_step;
     if (options.start_simulation) {
-      circut.update(options.offset, options.amplitude, window.getInputShape(), options.width, current_time, time_step);
-      window.add_timeStep(current_time);
-      window.add_state(circut.get_state());
+      circuit.update(options.offset, options.amplitude, window.getInputShape(), options.width, current_time, time_step);
+      window.addTimeStep(current_time);
+      window.addState(circuit.getState());
       current_time += time_step;
     }
     window.newFrame();
-    window.process_events(done);
-    window.render_parameters_window([&circut, &current_time]() {
-      circut.reset();
+    window.processEvents(done);
+    window.renderParametersWindow([&circuit, &current_time]() {
+      circuit.reset();
       current_time = 0;
     });
-    window.render_plot_window();
+    window.renderPlotWindow();
     window.render();
   }
 }
