@@ -62,20 +62,21 @@ void WindowManager::newFrame() {
   ImGui::NewFrame();
 }
 
-
 void WindowManager::render_plot_window() {
   ImGui::SetNextWindowPos(ImVec2(300, 0));
   ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x - 300, ImGui::GetIO().DisplaySize.y));
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
   ImGui::Begin("Graph Window", nullptr, window_flags);
 
-  if (ImPlot::BeginPlot("Circuit Data", ImVec2(-1, ImGui::GetIO().DisplaySize.y-35))) { // -35 to account for the ImGui stuff
+  if (ImPlot::BeginPlot("Circuit Data", ImVec2(-1, ImGui::GetIO().DisplaySize.y - 35))) {  // -35 to account for the ImGui stuff
     if (timeSteps.size() > 0 && options.auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
+
     auto plotLine = [&](const char* label, auto valueGetter) {
       std::vector<float> values(states.size());
       std::transform(states.begin(), states.end(), values.begin(), valueGetter);
       ImPlot::PlotLine(label, timeSteps.data(), values.data(), timeSteps.size());
     };
+
     if (timeSteps.size() > 0) {
       plotLine("ResistorVoltage", [](const CircutState& s) { return s.ResistorVoltage; });
       plotLine("inductorVoltage", [](const CircutState& s) { return s.inductorVoltage; });
@@ -108,13 +109,12 @@ void WindowManager::render() {
   SDL_RenderPresent(renderer);
 }
 
-
-//Getters and setters
+// Getters and setters
 void WindowManager::add_timeStep(float timeStep) { timeSteps.push_back(timeStep); }
 void WindowManager::add_state(CircutState state) { states.push_back(state); }
 
 CircutParameters WindowManager::getParams() const { return params; }
-WindowOptions WindowManager::getOptions() const { return options; }
+WindowOptions    WindowManager::getOptions() const { return options; }
 
 InputShape WindowManager::getInputShape() const {
   if (options.inputType == 0)
@@ -127,7 +127,7 @@ InputShape WindowManager::getInputShape() const {
     return InputShape::DC;
   throw std::runtime_error("Invalid Input Shape");
 }
-void WindowManager::render_parameters_window(std::function<void(void)> const& callback) {
+void WindowManager::render_parameters_window(std::function<void(void)> const& resetCallback) {
   ImGui::SetNextWindowPos(ImVec2(0, 0));
   ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));
 
@@ -172,8 +172,7 @@ void WindowManager::render_parameters_window(std::function<void(void)> const& ca
   if (ImGui::Button("Reset")) {
     states.clear();
     timeSteps.clear();
-    callback();
+    resetCallback();
   }
   ImGui::End();
 }
-
