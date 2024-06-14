@@ -5,8 +5,6 @@
 #include <algorithm>
 #include <cmath>
 #include <functional>
-#include <iostream>
-#include <ostream>
 #include <stdexcept>
 
 #include "SDL3/SDL_hints.h"
@@ -15,13 +13,10 @@
 #include "imgui_impl_sdlrenderer3.h"
 
 std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::initBackend() {
-  // Setup SDL
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMEPAD) != 0) throw std::runtime_error("SDL_Init failed");
 
-  // Enable native IME.
   SDL_SetHint(SDL_HINT_IME_SHOW_UI, "1");
 
-  // Create window with SDL_Renderer graphics context
   Uint32      window_flags = SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIDDEN;
   SDL_Window* window       = SDL_CreateWindow("Circut simulation", 1280, 720, window_flags);
   if (window == nullptr) throw std::runtime_error("SDL_CreateWindow failed");
@@ -71,21 +66,16 @@ void WindowManager::renderPlotWindow() {
   if (ImPlot::BeginPlot("Circuit Data", ImVec2(-1, ImGui::GetIO().DisplaySize.y - 35))) {  // -35 to account for the ImGui stuff
     if (timeSteps.size() > 0 && options.auto_scroll) ImPlot::SetupAxisLimits(ImAxis_X1, timeSteps.back() - 10, timeSteps.back(), ImGuiCond_Always);
 
-    auto plotLine = [&](const char* label, auto valueGetter) {
-      std::vector<float> values(states.size());
-      std::transform(states.begin(), states.end(), values.begin(), valueGetter);
-      ImPlot::PlotLine(label, timeSteps.data(), values.data(), timeSteps.size());
-    };
-
     if (timeSteps.size() > 0) {
-      plotLine("ResistorVoltage", [](const CircutState& s) { return s.ResistorVoltage; });
-      plotLine("inductorVoltage", [](const CircutState& s) { return s.inductorVoltage; });
-      plotLine("motorVoltage", [](const CircutState& s) { return s.motorVoltage; });
-      plotLine("current", [](const CircutState& s) { return s.current; });
-      plotLine("rotation speed", [](const CircutState& s) { return s.rot_speed; });
-      plotLine("rotations", [](const CircutState& s) { return s.rotation; });
-      plotLine("Input voltage", [](const CircutState& s) { return s.InputVoltage; });
+      ImPlot::PlotLine("Resistor voltage", timeSteps.data(), States.resistorVoltage.data(), timeSteps.size());
+      ImPlot::PlotLine("Inductor voltage", timeSteps.data(), States.inductorVoltage.data(), timeSteps.size());
+      ImPlot::PlotLine("Motor voltage", timeSteps.data(), States.motorVoltage.data(), timeSteps.size());
+      ImPlot::PlotLine("Current", timeSteps.data(), States.current.data(), timeSteps.size());
+      ImPlot::PlotLine("Rotational speed", timeSteps.data(), States.rotSpeed.data(), timeSteps.size());
+      ImPlot::PlotLine("Rotation", timeSteps.data(), States.rotation.data(), timeSteps.size());
+      ImPlot::PlotLine("Input voltage", timeSteps.data(), States.inputVoltage.data(), timeSteps.size());
     }
+
     ImPlot::EndPlot();
   }
   ImGui::End();
@@ -111,7 +101,15 @@ void WindowManager::render() {
 
 // Getters and setters
 void WindowManager::addTimeStep(float timeStep) { timeSteps.push_back(timeStep); }
-void WindowManager::addState(CircutState state) { states.push_back(state); }
+void WindowManager::addState(CircutState state) {
+  States.resistorVoltage.push_back(state.ResistorVoltage);
+  States.inductorVoltage.push_back(state.inductorVoltage);
+  States.motorVoltage.push_back(state.motorVoltage);
+  States.current.push_back(state.current);
+  States.rotSpeed.push_back(state.rot_speed);
+  States.rotation.push_back(state.rotation);
+  States.inputVoltage.push_back(state.InputVoltage);
+}
 
 CircutParameters WindowManager::getParams() const { return params; }
 WindowOptions    WindowManager::getOptions() const { return options; }
@@ -125,8 +123,9 @@ InputShape WindowManager::getInputShape() const {
     return InputShape::Triangle;
   else if (options.inputType == 3)
     return InputShape::DC;
-  throw std::runtime_error("Invalid Input Shape");
+  assert(false);  // This should never happen
 }
+
 void WindowManager::renderParametersWindow(std::function<void(void)> const& resetCallback) {
   ImGui::SetNextWindowPos(ImVec2(0, 0));
   ImGui::SetNextWindowSize(ImVec2(300, ImGui::GetIO().DisplaySize.y));
@@ -134,10 +133,11 @@ void WindowManager::renderParametersWindow(std::function<void(void)> const& rese
   ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse;
   ImGui::Begin("Left Side Window", nullptr, window_flags);
 
-  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle", "dc"};
-  ImGui::Combo("Input Type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
-  ImGui::InputFloat("dc offset", &options.offset);
-  ImGui::InputFloat("omega", &options.width);
+  const char* inputTypeItems[] = {"Harmonic", "Square", "Triangle", "DC"};
+  ImGui::Combo("Input type", &options.inputType, inputTypeItems, IM_ARRAYSIZE(inputTypeItems));
+  ImGui::InputFloat("DC offset", &options.offset);
+  ImGui::InputFloat("Amplitude", &options.amplitude);
+  ImGui::InputFloat("Pulsation", &options.pulse);
   ImGui::InputFloat("Resistance", &params.R);
   ImGui::InputFloat("Inductance", &params.L);
   ImGui::InputFloat("Kt", &params.Kt);
@@ -145,32 +145,31 @@ void WindowManager::renderParametersWindow(std::function<void(void)> const& rese
   ImGui::InputFloat("time step", &options.time_step, 0.0, 0.0f, "%.10f");
   ImGui::InputFloat("Momentum", &params.I);
   ImGui::InputFloat("Stiffness", &params.k);
-  ImGui::InputFloat("width (w)", &options.width);
-  ImGui::InputFloat("amplitude", &options.amplitude);
-  ImGui::Checkbox("Start Simulation", &options.start_simulation);
+  ImGui::Checkbox("Start simulation", &options.start_simulation);
   ImGui::Checkbox("auto scroll", &options.auto_scroll);
   ImGui::BulletText("Press 'ESC' to exit the program");
-  ImGui::BulletText("Currently Saved States: %zu", states.size());
-  ImGui::BulletText("Currently Saved Time steps: %zu", timeSteps.size());
-  ImGui::Text("Current Values: ");
-  if (states.size() > 0) {
-    ImGui::BulletText("current %f", states.back().current);
-    ImGui::BulletText("rot_speed %f", states.back().rot_speed);
-    ImGui::BulletText("rotation %f", states.back().rotation);
-    ImGui::BulletText("Input Voltage %f", states.back().InputVoltage);
-    ImGui::BulletText("Resistor Voltage %f", states.back().ResistorVoltage);
-    ImGui::BulletText("Inductor Voltage %f", states.back().inductorVoltage);
-    ImGui::BulletText("Motor Voltage %f", states.back().motorVoltage);
-    ImGui::BulletText("Time Step %f", timeSteps.back());
+  ImGui::BulletText("Currently saved states: %zu", States.inputVoltage.size());
+  ImGui::BulletText("Currently saved time steps: %zu", timeSteps.size());
+  ImGui::Text("Current values: ");
+
+  if (timeSteps.size() > 0) {
+    ImGui::BulletText("current %f", States.current.back());
+    ImGui::BulletText("rotational speed %f [rad/s]", States.rotSpeed.back());
+    ImGui::BulletText("rotations %f", States.rotation.back());
+    ImGui::BulletText("Input voltage %f", States.inputVoltage.back());
+    ImGui::BulletText("Resistor voltage %f", States.resistorVoltage.back());
+    ImGui::BulletText("Inductor voltage %f", States.inductorVoltage.back());
+    ImGui::BulletText("Motor voltage %f", States.motorVoltage.back());
+    ImGui::BulletText("Time %f", timeSteps.back());
   }
 
   if (ImGui::Button("Clear Data")) {
-    states.clear();
+    States.clear();
     timeSteps.clear();
   }
 
   if (ImGui::Button("Reset")) {
-    states.clear();
+    States.clear();
     timeSteps.clear();
     resetCallback();
   }

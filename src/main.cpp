@@ -29,10 +29,9 @@ auto triangle = [](float t, float w) -> float {
   else
     return 0;
 };
+auto dc = [](float, float) -> float { return 1; };
 
-auto dc = [](float t, float w) -> float { return 1; };
-
-using InputTable = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle), decltype(dc)>>;
+using InputFunctions = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle), decltype(dc)>>;
 
 class CircuitManager {
  public:
@@ -42,7 +41,6 @@ class CircuitManager {
     input.emplace(InputShape::Triangle, triangle);
     input.emplace(InputShape::DC, dc);
   }
-  void setParams(CircutParameters params_init) { params = params_init; };
 
   void update(float offset, float amplitude, InputShape shape, float w, float currentTime, float deltaT) {
     float input_Voltage = amplitude * std::visit([&](auto&& func) { return func(w, currentTime); }, input.at(shape)) + offset;
@@ -54,19 +52,14 @@ class CircuitManager {
     state.rot_speed += dw;
     state.current += di;
 
-    state.rotation        = state.rotation + state.rot_speed * deltaT;
+    state.rotation        = state.rotation + state.rot_speed * deltaT * 2 * M_PI;
     state.inductorVoltage = params.L * di / deltaT;
     state.motorVoltage    = params.Ke * state.rot_speed;
     state.ResistorVoltage = state.current * params.R;
-
-#ifdef DEBUG
-    std::cout << "Input Voltage: " << input_Voltage << std::endl;
-    std::cout << "Circuit Current: " << state.current << std::endl;
-    std::cout << "Rotational Speed: " << state.rot_speed << std::endl;
-#endif
   }
   auto getState() const { return state; }
   auto reset() { state = CircutState{}; }
+  void setParams(CircutParameters params_init) { params = params_init; };
 
  private:
   InputShape currentShape = InputShape::Harmonic;
@@ -75,7 +68,7 @@ class CircuitManager {
 
   CircutState      state{};
   CircutParameters params{};
-  InputTable       input{};
+  InputFunctions   input{};
 };
 
 int main(int, char**) {
@@ -89,7 +82,7 @@ int main(int, char**) {
     circuit.setParams(window.getParams());
     float time_step = options.time_step;
     if (options.start_simulation) {
-      circuit.update(options.offset, options.amplitude, window.getInputShape(), options.width, current_time, time_step);
+      circuit.update(options.offset, options.amplitude, window.getInputShape(), options.pulse, current_time, time_step);
       window.addTimeStep(current_time);
       window.addState(circuit.getState());
       current_time += time_step;
