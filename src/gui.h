@@ -48,7 +48,7 @@ class WindowManager {
   WindowOptions      options;
   CircutParameters   params;
 
-  auto                                   initImgui();
+  ImGuiIO initImgui();
   std::tuple<SDL_Window*, SDL_Renderer*> initBackend();
 
  public:
@@ -66,3 +66,5 @@ class WindowManager {
   CircutParameters getParams() const;
   WindowOptions    getOptions() const;
 };
+
+

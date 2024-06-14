@@ -1,13 +1,12 @@
 #pragma once
 
-
 struct CircutParameters {
-  float R{}; //resistance
-  float L{}; //inductance
-  float Kt{};
-  float Ke{};
-  float I{}; //Momentum
-  float k{}; //spring
+  float R  = 1;
+  float L  = 1;
+  float Kt = 1;
+  float Ke = 1;
+  float I  = 1;
+  float k  = 1;
 };
 
 struct CircutState {

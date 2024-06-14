@@ -29,7 +29,7 @@ std::tuple<SDL_Window*, SDL_Renderer*> WindowManager::initBackend() {
   return {window, renderer};
 }
 
-auto WindowManager::initImgui() {
+ImGuiIO WindowManager::initImgui() {
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
   ImGuiIO io = ImGui::GetIO();

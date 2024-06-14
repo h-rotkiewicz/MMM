@@ -1,7 +1,9 @@
 #include <SDL3/SDL.h>
 
 #include <cmath>
+#include <iostream>
 #include <numbers>
+#include <ostream>
 #include <unordered_map>
 #include <variant>
 
@@ -31,8 +33,6 @@ auto triangle = [](float t, float w) -> float {
 };
 auto dc = [](float, float) -> float { return 1; };
 
-using InputFunctions = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle), decltype(dc)>>;
-
 class CircuitManager {
  public:
   CircuitManager() {
@@ -42,7 +42,7 @@ class CircuitManager {
     input.emplace(InputShape::DC, dc);
   }
 
-  void update(float offset, float amplitude, InputShape shape, float w, float currentTime, float deltaT) {
+  void update(float offset, float amplitude, InputShape shape, float w) {
     float input_Voltage = amplitude * std::visit([&](auto&& func) { return func(w, currentTime); }, input.at(shape)) + offset;
     state.InputVoltage  = input_Voltage;
 
@@ -56,43 +56,44 @@ class CircuitManager {
     state.inductorVoltage = params.L * di / deltaT;
     state.motorVoltage    = params.Ke * state.rot_speed;
     state.ResistorVoltage = state.current * params.R;
+    currentTime += deltaT;
   }
-  auto getState() const { return state; }
-  auto reset() { state = CircutState{}; }
-  void setParams(CircutParameters params_init) { params = params_init; };
+  CircutState getState() const { return state; }
+  void reset() {
+    state       = CircutState{};
+    currentTime = 0;
+  }
+  float getCurrentTime() const { return currentTime; }
+  void setParams(CircutParameters params_) { params = params_; };
+  void setDeltaT(float deltaT_) { deltaT = deltaT_; }
 
  private:
+  using inputFunctionsMap    = unordered_map<InputShape, std::variant<decltype(harmonic), decltype(square), decltype(triangle), decltype(dc)>>;
   InputShape currentShape = InputShape::Harmonic;
-  float      currentTime  = 1;
-  float      delatTime    = 0.01;
+  float      currentTime  = 0;
+  float      deltaT       = 0;
 
   CircutState      state{};
   CircutParameters params{};
-  InputFunctions   input{};
+  inputFunctionsMap   input{};
 };
 
 int main(int, char**) {
   CircuitManager circuit;
   WindowManager  window;
-  float          current_time = 0;
-  bool           done         = false;
-
+  bool           done = false;
   while (!done) {
     auto options = window.getOptions();
     circuit.setParams(window.getParams());
-    float time_step = options.time_step;
+    circuit.setDeltaT(options.time_step);
     if (options.start_simulation) {
-      circuit.update(options.offset, options.amplitude, window.getInputShape(), options.pulse, current_time, time_step);
-      window.addTimeStep(current_time);
+      circuit.update(options.offset, options.amplitude, window.getInputShape(), options.pulse);
+      window.addTimeStep(circuit.getCurrentTime());
       window.addState(circuit.getState());
-      current_time += time_step;
     }
     window.newFrame();
     window.processEvents(done);
-    window.renderParametersWindow([&circuit, &current_time]() {
-      circuit.reset();
-      current_time = 0;
-    });
+    window.renderParametersWindow([&circuit]() { circuit.reset(); });
     window.renderPlotWindow();
     window.render();
   }
